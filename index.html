@@ -38,12 +38,12 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .orb1{width:600px;height:600px;background:radial-gradient(circle,rgba(124,107,255,0.18),transparent 70%);top:-100px;left:-200px}
 .orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(34,211,238,0.12),transparent 70%);top:40vh;right:-150px}
 .orb3{width:400px;height:400px;background:radial-gradient(circle,rgba(244,114,182,0.1),transparent 70%);bottom:10vh;left:20%}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);backdrop-filter:blur(20px);background:rgba(6,6,16,0.7)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid var(--border);backdrop-filter:blur(20px);background:rgba(6,6,16,0.7)}.nav-inner{max-width:1280px;margin:0 auto;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center}
 .nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;background:linear-gradient(90deg,var(--accent2),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.05em;transition:color .2s}
 .nav-links a:hover{color:var(--text)}
-.hero{min-height:auto;background-color:#060610;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:5rem 3rem 3rem;gap:4rem;position:relative;z-index:1}
+.page-wrap{max-width:1280px;margin:0 auto;width:100%}.hero{min-height:auto;background-color:#060610;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:5rem 3rem 3rem;gap:4rem;position:relative;z-index:1}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(124,107,255,0.12);border:1px solid rgba(124,107,255,0.3);border-radius:100px;padding:.35rem .9rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);margin-bottom:1.8rem}
 .hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
@@ -244,6 +244,7 @@ h1{animation:fadeUp .6s .15s both}
 <div class="orb orb3"></div>
 
 <nav>
+  <div class="nav-inner">
   <a href="#" class="nav-logo" style="text-decoration:none">Kevin Szalai</a>
   <ul class="nav-links">
     <li><a href="#about">Perfil</a></li>
@@ -252,9 +253,10 @@ h1{animation:fadeUp .6s .15s both}
     <li><a href="#projects">Proyectos</a></li>
     <li><a href="#contact">Contacto</a></li>
   </ul>
+  </div>
 </nav>
 
-<section class="hero">
+<div class="page-wrap"><section class="hero">
   <div class="hero-text">
     <div class="hero-badge"><span></span> Disponible para nuevas oportunidades</div>
 
@@ -548,7 +550,7 @@ h1{animation:fadeUp .6s .15s both}
   </div>
 </section>
 
-<footer>
+</div><footer>
   <span class="footer-copy">© 2026 Kevin Szalai · Buenos Aires, Argentina</span>
   <span class="footer-name">Marketing &amp; Publicidad LATAM</span>
 </footer>
