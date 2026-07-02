@@ -17,18 +17,23 @@
   .list { display: flex; flex-direction: column; gap: 10px; }
   .item { background: #fff; border: 0.5px solid #d0dcea; border-radius: 10px; display: flex; align-items: center; overflow: hidden; text-decoration: none; transition: box-shadow 0.15s; }
   .item:hover { box-shadow: 0 4px 16px rgba(0,82,143,0.12); }
+  .item-disabled { background: #f8fafc; border: 0.5px solid #e0e8f0; border-radius: 10px; display: flex; align-items: center; overflow: hidden; cursor: not-allowed; opacity: 0.65; }
   .item-num { width: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: #fff; align-self: stretch; }
   .n1 { background: #00528F; }
   .n2 { background: #002447; }
   .n3 { background: #008091; }
+  .n4 { background: #aab4c0; }
   .item-body { flex: 1; padding: 14px 18px; }
   .item-title { font-size: 15px; font-weight: 600; color: #00528F; margin-bottom: 3px; }
+  .item-title-disabled { font-size: 15px; font-weight: 600; color: #8a9aaa; margin-bottom: 3px; }
   .item-desc { font-size: 12px; color: #6b7f95; line-height: 1.5; }
   .item-arrow { padding: 0 20px; color: #b0bec8; font-size: 20px; flex-shrink: 0; }
+  .badge-soon { padding: 0 20px; flex-shrink: 0; }
+  .badge-soon span { font-size: 10px; font-weight: 600; background: #e8eef4; color: #8a9aaa; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; }
   .legal { margin: 20px 24px 0; padding: 12px 14px; background: #f4f8fc; border: 0.5px solid #d0dcea; border-radius: 8px; display: flex; align-items: flex-start; gap: 10px; }
   .legal-icon { color: #008091; flex-shrink: 0; margin-top: 2px; }
   .legal p { font-size: 11px; color: #7a8f9e; line-height: 1.6; }
-  .footer { padding: 16px 24px; text-align: center; font-size: 10px; color: #aab4c0; letter-spacing: 0.04em; margin-top: 16px; border-top: 0.5px solid #e8eef4; }
+  .spacer { height: 20px; }
 </style>
 </head>
 <body>
@@ -41,11 +46,11 @@
     <p class="intro">Hacé clic en el recurso que necesitás para abrirlo directamente.</p>
     <div class="list">
 
-      <a class="item" href="https://kevinszalai.github.io/invitaciones/" target="_blank">
+      <a class="item" href="https://kevinszalai.github.io/ua-promo-platform-/index.html" target="_blank">
         <div class="item-num n1">01</div>
         <div class="item-body">
-          <div class="item-title">Creador de Invitaciones</div>
-          <div class="item-desc">Creá invitaciones personalizadas para eventos y acciones comerciales.</div>
+          <div class="item-title">Creador de Flyers para Promociones</div>
+          <div class="item-desc">Creá flyers promocionales con la identidad visual de UA.</div>
         </div>
         <div class="item-arrow">→</div>
       </a>
@@ -68,15 +73,23 @@
         <div class="item-arrow">→</div>
       </a>
 
+      <div class="item-disabled">
+        <div class="item-num n4">04</div>
+        <div class="item-body">
+          <div class="item-title-disabled">Creador de Invitaciones</div>
+          <div class="item-desc">Creá invitaciones personalizadas para eventos y acciones comerciales.</div>
+        </div>
+        <div class="badge-soon"><span>Próximamente</span></div>
+      </div>
+
     </div>
 
     <div class="legal">
       <div class="legal-icon">ⓘ</div>
       <p>Estas herramientas se encuentran en <strong>fase de pruebas</strong> y pueden presentar errores o comportamientos inesperados.</p>
     </div>
+    <div class="spacer"></div>
   </div>
-
-
 </div>
 </body>
 </html>
